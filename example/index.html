@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IOT-Tracker</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" />
+  <link rel="stylesheet" href="css/m.css" />
+
+  <script src="js/app.js"></script>
+	<script src="../src/leaflet-routeboxer.js"></script>
+	<script src="lib/Polyline.encoded.js"></script>
+
+  <script>
+
+    var app = {};
+    var _this = this;
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      _this.app = new App();
+		});
+
+  </script>
+
+
+</head>
+<body>
+
+  <div id="map"></div>
+	<div id="controls"></div>
+	<div class="infos">
+		<h3 class="">Total Driving Distance: <span id="distance">0</span> Km</h3>
+		<h3 class="">Duration: <span id="duration"></h3>
+		<h3 class="">Distance Remaining: <span id="drive">0</span> Km</h3>
+	</div>
+	<div id="notif">
+		<h3 id="notify">
+
+		</h3>
+	</div>
+<!-- <script async defer id="github-bjs" src="//buttons.github.io/buttons.js"></script> -->
+</body>
+</html>
