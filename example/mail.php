@@ -5,11 +5,13 @@ use PHPMailer\PHPMailer\SMTP;
 
 require '../vendor/autoload.php';
 
-$email_link = 'apextech2010@outlook.com';
+// enter you email link here
+$email_link = 'email@outlook.com';
+
 $body = '<html lang="en">
       <head>
       <meta charset="UTF-8">
-      <title>RESUME Account Activation</title>
+      <title>Package Delivery</title>
       <style>
       .wrapper{
         padding: 20px;
@@ -39,13 +41,12 @@ $mail = new PHPMailer(true);
       // send verification mail
       try {
         //Server settings
-        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    //Enable verbose debug output
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    // uncomment to enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        // $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
         $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = $email_link;                     //SMTP username
-        $mail->Password   = 'Nifemi64';                               //SMTP password
+        $mail->Password   = 'you email password';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;
         // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
@@ -53,12 +54,8 @@ $mail = new PHPMailer(true);
         // Recipients
         $mail->setFrom($email_link, 'GPS TRACKER');
         // $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-        $mail->addAddress('damilolasalako96@gmail.com', 'damilolasalako96@gmail.com');               //Name is optional
         $mail->addReplyTo($email_link, 'GPS TRACKER');
         $mail->setFrom($email_link, 'GPS TRACKER');
-        // $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-        // $mail->addAddress($company_email, $company_name);               //Name is optional
-        // $mail->addReplyTo($email_link, 'JAAD Logistics');
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
 
