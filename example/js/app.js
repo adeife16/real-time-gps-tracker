@@ -1,11 +1,7 @@
-   /**
-   *  Example app to show leaflet-routerbox
-   *
-   *
-   **/
+
    sessionStorage.setItem("mail", 0);
       // api url
-      const api_url = "https://api.thingspeak.com/channels/1848228/fields/1.json?api_key=C0J8MFW97TT7W612&results=1";
+      const api_url = "your thingspeak read api here";
       var channel;
       var feed;
       var newLatLng;
@@ -13,22 +9,17 @@
       var popup;
 
 
-      // navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.getCurrentPosition(showPosition);
 
       function showPosition(){
-        let latitude = 6.892301;
-        let longitude = 2.989188;
-
-//         let latitude = 6.891427;
-//         let longitude = 2.997222;
-
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
 
       sessionStorage.setItem("userLat", latitude);
       sessionStorage.setItem("userLng", longitude);
 
       sessionStorage.setItem("userLatLng", latitude+','+longitude);
     }
-    showPosition();
     var deviceLat;
     var deviceLng;
 
@@ -204,7 +195,7 @@
     });
 
   };
-
+//    uncomment this comment to calculate straight line distance
   // function distance(lat1, lon1, lat2, lon2, unit) {
   //         var radlat1 = Math.PI * lat1/180
   //         var radlat2 = Math.PI * lat2/180
@@ -242,6 +233,7 @@
 
       // }
 
+// get distance using routes
   function getDist(userlat, userlng, deviceLat, deviceLng){
     $.ajax({
       type: 'GET',
