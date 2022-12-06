@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\SMTP;
 
 require '../vendor/autoload.php';
 
-$email_link = 'apextech2010@outlook.com';
+$email_link = 'dadaadeife@outlook.com';
+// $email_link = 'apextech2010@outlook.com';
 $body = '<html lang="en">
       <head>
       <meta charset="UTF-8">
@@ -45,7 +46,8 @@ $mail = new PHPMailer(true);
         $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = $email_link;                     //SMTP username
-        $mail->Password   = 'Nifemi64';                               //SMTP password
+        $mail->Password   = 'u7+:p@7q8KkRE*U';                               //SMTP password
+        // $mail->Password   = 'Nifemi64';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;
         // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above

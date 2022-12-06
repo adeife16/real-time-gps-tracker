@@ -63,8 +63,8 @@ body {
   background:  red;
   border-radius: 1px solid #cd0202;
   position: absolute;
-  top: 10px;
-  left: 70px;
+  top: 60px;
+  left: 50px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
@@ -75,4 +75,30 @@ body {
   color: white;
   font-weight: bolder;
 
+}
+.actions{
+  /*position: relative;*/
+  z-index: 9999;
+}
+
+.btn{
+  padding: 10px;
+  margin:  10px;
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+  z-index: 99999;
+  position: relative;
+  /*top: 10px;*/
+  /*left: 50px;*/
+
+}
+.green{
+  background: green;
+}
+.red{
+  background: red;
+}
+.color-white{
+  color: white;
 }
