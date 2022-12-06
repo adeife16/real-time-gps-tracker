@@ -15,7 +15,7 @@
   //     $(this).removeClass("green");
   //     $(this).addClass("red");
   //     $(this).html("STOP");
-  //   }  
+  //   }
   // })
       // api url
       // const api_url = "https://api.thingspeak.com/channels/1848228/fields/1.json?api_key=C0J8MFW97TT7W612&results=1";
@@ -266,7 +266,6 @@
 
       sessionStorage.setItem("userLatLng", latitude+','+longitude);
     }
-    showPosition();
     var deviceLat;
     var deviceLng;
 
@@ -485,6 +484,7 @@
 
       // }
 
+// get distance using routes
   function getDist(userlat, userlng, deviceLat, deviceLng){
     $.ajax({
       type: 'GET',
@@ -579,7 +579,7 @@
       //     var data = await response.json();
       //     if (response.status == 200){
       //         var lastEntry = data.channel.last_entry_id;
-              
+
       //         var lastPos = data.feeds[0].field1;
       //         sessionStorage.setItem("lastPos", lastPos);
       //         // console.log(lastPos);
